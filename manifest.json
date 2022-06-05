@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Todo List",
+  "name": "Todo List",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://avatars.mds.yandex.net/i?id=773e3d07686500a67c92094d39b484bf-5869427-images-thumbs&n=13&exp=1",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
