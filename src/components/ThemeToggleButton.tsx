@@ -11,6 +11,9 @@ const ThemeToggleButton: React.FC = () => {
 
         if(currentThemeLS === "false") {
             currentTheme?.setTheme(false);
+        } else {
+            currentTheme?.setTheme(true);
+            localStorage.setItem("currentTheme", "true");
         }
     }, [])
 
