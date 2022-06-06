@@ -1,4 +1,3 @@
-import "../App.css";
 import { BsPlusLg } from "react-icons/bs";
 import { removeAllExtraSpaces } from "../helpers/removeAllExtraSpaces";
 
@@ -24,7 +23,7 @@ const InputTask: React.FC<InputTaskProps> = (props) => {
     return (
         <div className="min-w-full my-input-grid">
             <input
-                className="color my-input-border w-[100%]"
+                className="my-input-border w-[100%]"
                 placeholder="Add new task"
                 maxLength={50}
                 value={props.inputValue} 
@@ -33,7 +32,7 @@ const InputTask: React.FC<InputTaskProps> = (props) => {
             />
             <button 
                 onClick={addTask}
-                className="bg-red-900 w-12 h-7 flex justify-center items-center rounded-lg"
+                className="my-btn-color w-12 h-7 flex justify-center items-center rounded-lg"
             >
                 <BsPlusLg size={20}/>
             </button>

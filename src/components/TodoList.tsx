@@ -25,7 +25,7 @@ const TodoList: React.FC<TodoItemProps> = (props) => {
         <div className="mb-[65px]">
            {props.tasks.length 
                 ? TodoList 
-                : <div className="text-2xl italic text-pink-500 text-center mb-4">
+                : <div className="text-2xl italic my-no-tasks text-center mb-4">
                     There are no tasks yet
                 </div>
             }

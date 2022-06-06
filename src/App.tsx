@@ -1,9 +1,9 @@
-import './App.css';
 import { TodoList } from './components/TodoList';
 import { useState } from 'react';
 import { ITodoItem } from './types/types';
 import { generateId } from './helpers/idGenerator';
 import { InputTask } from './components/InputTask';
+import { ThemeToggleButton } from './components/ThemeToggleButton';
 
 const App: React.FC = () => {
     const [tasks, setTasks] = useState<ITodoItem[]>(getCurrentState());
@@ -11,7 +11,7 @@ const App: React.FC = () => {
 
     function getCurrentState () {
         try {
-            const tasksFromLS = window.localStorage.getItem("tasks");
+            const tasksFromLS = localStorage.getItem("tasks");
             const currentState = (JSON.parse(tasksFromLS || "[]")) as ITodoItem[];
             return currentState;
         } catch (err) {
@@ -86,8 +86,9 @@ const App: React.FC = () => {
     }
 
     return (
-        <div className="my-main-bg-color min-h-screen py-10 px-3 max-w-3xl m-auto">
-            <h1 className="text-3xl font-bold mb-10 text-center">Todo List</h1>
+        <div className="min-h-screen py-10 px-3 max-w-3xl m-auto">
+            <h1 className="text-3xl font-bold mb-5 text-center">Todo List</h1>
+            <ThemeToggleButton />
             <div className="max-w-4xl">
                 <TodoList
                     tasks={tasks}

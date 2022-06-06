@@ -15,7 +15,7 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
     return (
             <button
             className={
-                `border-pink-500 
+                `my-checbox-border
                 border-2 
                 rounded-full  
                 w-[20px] 
@@ -23,7 +23,7 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
                 flex 
                 justify-center 
                 items-center
-                ${props.isCompleted ? "bg-pink-500" : null}`   
+                ${props.isCompleted ? "my-checbox-bg" : null}`   
             }
                 onClick={completeTheTask}
             >

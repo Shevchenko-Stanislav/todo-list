@@ -5,7 +5,6 @@ import { BsTrash } from "react-icons/bs";
 import { TbEdit } from "react-icons/tb"
 import { BsCheckCircleFill } from "react-icons/bs";
 import { Checkbox } from "./Checkbox";
-import "../../App.css";
 
 interface TodoItemProps extends ITodoItem {
     completeTheTask: (id: string) => void;

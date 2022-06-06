@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    color: white;
+    /* color: white; */
     font-size: medium;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,6 +19,80 @@ code {
         monospace;
 }
 
-#root {
-    background-color: #3D47AF;
+:root {
+    --bg-dark: rgb(12, 12, 12);
+    --bg-light: #3D47AF;
+    --item-light: #0A155A;
+    --item-dark: #1f2937;
+    --accent-dark: #ec4899;
+    --accent-light: #7f1d1d;
+}
+
+.layout {
+    color: white;
+    background-color: var(--bg-light);
+}
+
+.layout.dark {
+    background-color: var(--bg-dark);
+}
+
+.my-item-color {
+    background-color: var(--item-light);
+}
+
+.layout.dark .my-item-color {
+    background-color: var(--item-dark);
+}
+
+.layout.dark .my-no-tasks {
+   color: var(--accent-dark);
+}
+
+.my-btn-color {
+    background-color: var(--accent-light)
+}
+
+.my-checbox-border {
+    border-color: var(--accent-light);
+}
+
+.layout.dark .my-checbox-border {
+    border-color: var(--accent-dark);
+}
+
+.my-checbox-bg {
+    background-color: var(--accent-light)
+}
+
+.layout.dark .my-checbox-bg {
+    background-color: var(--accent-dark)
+}
+
+.layout.dark .my-btn-color {
+    background-color: var(--accent-dark)
+}
+
+.my-grid {
+    display: grid;
+    grid-template-columns: 24px 1fr 24px 24px;
+    gap: 7px;
+}
+
+.my-input-border {
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: 0 4px 0 -3px #0A155A;
+    /* #97266d */
+}
+
+.layout.dark .my-input-border {
+    box-shadow: 0 4px 0 -3px var(--item-dark);
+}
+
+.my-input-grid {
+    display: grid;
+    grid-template-columns: 1fr 48px;
+    gap: 12px;
 }
