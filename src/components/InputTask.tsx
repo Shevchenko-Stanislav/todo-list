@@ -24,7 +24,7 @@ const InputTask: React.FC<InputTaskProps> = (props) => {
         <div className="min-w-full my-input-grid">
             <input
                 className="my-input-border w-[100%]"
-                placeholder="Add new task"
+                placeholder="Add a new task"
                 maxLength={50}
                 value={props.inputValue} 
                 onChange={(e) => {props.setInputValue(e.target.value)}}
