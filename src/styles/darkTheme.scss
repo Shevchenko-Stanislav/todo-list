@@ -1,0 +1,31 @@
+$bg-dark: rgb(12, 12, 12);
+$item-dark: #1f2937;
+$accent-dark: #ec4899;
+
+.layout.dark {
+    background-color: $bg-dark;
+
+    .my-item-color {
+        background-color: $item-dark;
+    }
+
+    .my-no-tasks {
+        color: $accent-dark;
+    }
+
+    .my-checbox-border {
+        border-color: $accent-dark;
+    }
+
+    .my-checbox-bg {
+        background-color: $accent-dark;
+    }
+
+    .my-btn-color {
+        background-color: $accent-dark;
+    }
+
+    .my-input-border {
+        box-shadow: 0 4px 0 -3px $item-dark;
+    }
+}

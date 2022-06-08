@@ -5,4 +5,4 @@ interface ITodoItem {
     isCompleted: boolean
 }
 
-export type {ITodoItem}
+export type { ITodoItem }

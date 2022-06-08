@@ -1,23 +1,28 @@
 import { BsPlusLg } from "react-icons/bs";
+import { useState } from "react";
 import { removeAllExtraSpaces } from "../helpers/removeAllExtraSpaces";
+import { useAppDispatch } from "../hooks/redux";
+import { addTask } from "../store/reducers/todoSlice";
+import { generateId } from "../helpers/idGenerator";
 
-interface InputTaskProps {
-    inputValue: string;
-    addTask: (message: string) => void;
-    setInputValue: (currentValue: string) => void;
-}
 
-const InputTask: React.FC<InputTaskProps> = (props) => {
+const InputTask: React.FC = () => {
+    const [inputValue, setInputValue] = useState<string>("");
+    const dispatch = useAppDispatch();
 
     function addTaskOnKeyEnter (e: React.KeyboardEvent<HTMLInputElement>) {
         if(e.key === "Enter") {
-            addTask()
+            addNewTask()
         }
     }
 
-    function addTask () {
-        const newString = removeAllExtraSpaces(props.inputValue);
-        props.addTask(newString)
+    function addNewTask () {
+        const newString = removeAllExtraSpaces(inputValue);
+        if (newString.length) {
+            const itenId = generateId();
+            dispatch(addTask({message: newString, id: itenId}));
+        }
+        setInputValue("");
     }
 
     return (
@@ -26,12 +31,12 @@ const InputTask: React.FC<InputTaskProps> = (props) => {
                 className="my-input-border w-[100%]"
                 placeholder="Add a new task"
                 maxLength={50}
-                value={props.inputValue} 
-                onChange={(e) => {props.setInputValue(e.target.value)}}
+                value={inputValue} 
+                onChange={(e) => {setInputValue(e.target.value)}}
                 onKeyDown={addTaskOnKeyEnter}
             />
             <button 
-                onClick={addTask}
+                onClick={addNewTask}
                 className="my-btn-color w-12 h-7 flex justify-center items-center rounded-lg"
             >
                 <BsPlusLg size={20}/>

@@ -1,0 +1,24 @@
+$bg-light: #3D47AF;
+$item-light: #0A155A;
+$accent-light: #7f1d1d;
+
+.layout {
+    color: white;
+    background-color: $bg-light;
+
+    .my-item-color {
+        background-color: $item-light;
+    }
+
+    .my-btn-color {
+        background-color: $accent-light;
+    }
+
+    .my-checbox-border {
+        border-color: $accent-light;
+    }
+
+    .my-checbox-bg {
+        background-color: $accent-light;
+    }
+}
