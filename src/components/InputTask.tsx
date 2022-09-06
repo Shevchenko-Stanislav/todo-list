@@ -26,7 +26,7 @@ const InputTask: React.FC = () => {
     }
 
     return (
-        <div className="min-w-full my-input-grid">
+        <div className="min-w-full my-input-grid pt-4 px-3">
             <input
                 className="my-input-border w-[100%]"
                 placeholder="Add a new task"
